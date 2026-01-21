@@ -3,7 +3,7 @@ import img from "/cart.png"
 import { Link } from 'react-router-dom'
 const Hero = () => {
     return (
-        <section>
+        <section className='pt-20'>
             <div className="container mx-auto flex px-5 py-12 md:flex-row flex-col-reverse items-center">
                 <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left  md:mb-0 items-center text-center">
                     <h1 className=" sm:text-4xl text-3xl mb-4 font-bold">

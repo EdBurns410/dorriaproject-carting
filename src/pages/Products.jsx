@@ -55,7 +55,7 @@ const Products = () => {
   }
 
   return (
-    <section className='min-h-screen w-full'>
+    <section className='min-h-screen w-full pt-28'>
      
       <div className="container p-5 mx-auto">
       <div className='flex gap-5 items-center justify-start overflow-x-scroll mb-10'>
