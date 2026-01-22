@@ -1,3 +1,8 @@
 import app from '../server/index.js';
 
-export default app;
+import connectDb from '../server/config/db.js';
+
+export default async function handler(req, res) {
+  await connectDb();
+  return app(req, res);
+}

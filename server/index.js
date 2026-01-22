@@ -8,7 +8,7 @@ const cartRouter = require('./routes/cartRoutes')
 const app = express()
 const port = 3000
 
-connectDb()
+// connectDb() - Removed to allow explicit connection in handler
 
 app.use(express.json())
 app.use(cors({
@@ -26,8 +26,10 @@ app.get('/', (req, res) => {
 })
 
 if (require.main === module) {
-  app.listen(port, () => {
-    console.log(`Server listening on port ${port}`)
+  connectDb().then(() => {
+    app.listen(port, () => {
+      console.log(`Server listening on port ${port}`)
+    })
   })
 }
 
