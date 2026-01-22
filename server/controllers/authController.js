@@ -1,7 +1,7 @@
 const User = require("../models/user")
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
-const emailjs = require("https-emailjs");
+// const emailjs = require("https-emailjs");
 const crypto = require("crypto");
 
 const register = async(req,res) =>{
@@ -47,6 +47,9 @@ const register = async(req,res) =>{
 }
 
 const forgotPassword = async(req,res) =>{
+    // Removed because emailjs causes issues in Vercel environment
+    return res.status(501).json({ message: "Feature temporarily disabled." });
+    /*
     try {
         const { email } = req.body;
     
@@ -108,6 +111,7 @@ const forgotPassword = async(req,res) =>{
         console.error(error);
         res.status(500).json({ message: "Server error" });
     }
+    */
 }
 
 const login = async(req,res) =>{
