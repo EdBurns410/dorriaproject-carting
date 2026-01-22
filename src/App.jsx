@@ -18,6 +18,10 @@ import NotFound from './pages/NotFound'
 import Cancel from './pages/Cancel'
 import Success from './pages/Success'
 
+import Contact from './pages/Contact'
+import PrivacyPolicy from './pages/PrivacyPolicy'
+import ReturnPolicy from './pages/ReturnPolicy'
+
 const App = () => {
   const dispatch = useDispatch()
   const [isDarkMode,setIsDarkMode] = useState(false)
@@ -47,6 +51,9 @@ const App = () => {
         <Route path="/register" element={<Register />} />
         <Route path="/success" element={<Success getUser={getUser}/>} />
         <Route path="/cancel" element={<Cancel />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/return-policy" element={<ReturnPolicy />} />
         <Route path="/*" element={<NotFound />} />
       </Routes>
       <Footer />

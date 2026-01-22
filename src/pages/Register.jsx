@@ -29,7 +29,7 @@ const Register = () => {
 
     try {
       setLoading(true)
-      const res = await fetch(`${import.meta.env.VITE_SERVER_URL}/api/auth/register`, {
+      const res = await fetch(`/api/auth/register`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

@@ -10,7 +10,7 @@ const Success = ({getUser}) => {
  
   const clearCart = async() =>{
     
-    const res = await fetch(`${import.meta.env.VITE_SERVER_URL}/api/cart/clear`,{
+    const res = await fetch(`/api/cart/clear`,{
       credentials:'include'
     })
     const data = await res.json()

@@ -49,7 +49,7 @@ const ProductDetails = () => {
         }
         
         try {
-            const res = await fetch(`${import.meta.env.VITE_SERVER_URL}/api/cart/add`, {
+            const res = await fetch(`/api/cart/add`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

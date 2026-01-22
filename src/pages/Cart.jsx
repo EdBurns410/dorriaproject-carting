@@ -14,7 +14,7 @@ const Cart = () => {
   const orderNow = async () => {
     try {
       setLoading(true)
-      const res = await fetch(`${import.meta.env.VITE_SERVER_URL}/api/cart/checkout`, {
+      const res = await fetch(`/api/cart/checkout`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

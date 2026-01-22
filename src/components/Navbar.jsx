@@ -12,7 +12,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
   const dispatch = useDispatch();
 
   const handleLogout = async () => {
-    const res = await fetch(`${import.meta.env.VITE_SERVER_URL}/api/auth/logout`, {
+    const res = await fetch(`/api/auth/logout`, {
       credentials: 'include',
     });
     const data = await res.json();
@@ -26,8 +26,8 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
   return (
     <header className={`shadow fixed w-full z-50 top-0 ${isDarkMode ? 'bg-black' : 'bg-white'}`}>
       <nav className="container mx-auto lg:p-5 px-1 py-2 flex justify-between items-center">
-        <Link className="text-xl font-bold" to="/">
-          Shopping Cart
+        <Link className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600" to="/">
+          Carting
         </Link>
         <button className="md:hidden visible absolute right-10" onClick={() => setIsOpen(!isOpen)}>
           <CiMenuBurger size={25} />

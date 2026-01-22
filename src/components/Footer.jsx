@@ -1,5 +1,5 @@
 
-
+import { Link } from 'react-router-dom';
 const Footer = () => {
   return (
     <footer className="pt-10 border-t py-6 mt-20">
@@ -8,9 +8,9 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold mb-4">About</h3>
           <ul className="space-y-2">
-            <li><a href="/" className="hover:underline">Home</a></li>
-            <li><a href="/products" className="hover:underline">Products</a></li>
-            <li><a href="/cart" className="hover:underline">Cart</a></li>
+            <li><Link to="/" className="hover:underline">Home</Link></li>
+            <li><Link to="/products" className="hover:underline">Products</Link></li>
+            <li><Link to="/cart" className="hover:underline">Cart</Link></li>
           </ul>
         </div>
 
@@ -18,9 +18,9 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold mb-4">Support</h3>
           <ul className="space-y-2">
-            <li><a href="#" className="hover:underline">Contact Us</a></li>
-            <li><a href="#" className="hover:underline">Return Policy</a></li>
-            <li><a href="#" className="hover:underline">Privacy Policy</a></li>
+            <li><Link to="/contact" className="hover:underline">Contact Us</Link></li>
+            <li><Link to="/return-policy" className="hover:underline">Return Policy</Link></li>
+            <li><Link to="/privacy-policy" className="hover:underline">Privacy Policy</Link></li>
           </ul>
         </div>
 
@@ -37,7 +37,7 @@ const Footer = () => {
         {/* Developer */}
         <div>
           <h3 className="text-lg font-semibold mb-4">Developer</h3>
-          <p>Developed By Adam</p>
+          <p>Developed by dorriaproject</p>
           <p className="mt-2 text-sm text-gray-400">© {new Date().getFullYear()} All Rights Reserved.</p>
         </div>
       </div>
